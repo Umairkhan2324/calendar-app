@@ -1,0 +1,9 @@
+
+<div class="container">
+    <h1>Calendar</h1>
+    <app-add-appointment></app-add-appointment>
+    <div cdkDropList (cdkDropListDropped)="drop($event)">
+      <app-appointment-list *ngFor="let appointment of appointments$ | async" [appointment]="appointment" cdkDrag></app-appointment-list>
+    </div>
+  </div>
+  
